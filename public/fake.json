@@ -1,0 +1,105 @@
+ {
+    "title": "Cox's Bazar Sea Beach Tour",
+    "description": "Enjoy the world's longest sea beach with sunset and seafood.",
+    "price": 8000,
+    "duration": "3 Days 2 Nights",
+    "location": "Cox's Bazar",
+    "image": {
+      "public_id": "tour/coxs",
+      "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+    }
+  },
+  {
+    "title": "Sajek Valley Cloud Tour",
+    "description": "Live above the clouds and explore tribal life.",
+    "price": 6000,
+    "duration": "2 Days 1 Night",
+    "location": "Sajek",
+    "image": {
+      "public_id": "tour/sajek",
+      "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+    }
+  },
+  {
+    "title": "Saint Martin Coral Island",
+    "description": "Crystal clear water and coral beach experience.",
+    "price": 9500,
+    "duration": "3 Days 2 Nights",
+    "location": "Saint Martin",
+    "image": {
+      "public_id": "tour/stmartin",
+      "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+    }
+  },
+  {
+    "title": "Sundarbans Jungle Safari",
+    "description": "Explore mangrove forest and wildlife.",
+    "price": 12000,
+    "duration": "4 Days 3 Nights",
+    "location": "Sundarbans",
+    "image": {
+      "public_id": "tour/sundarbans",
+      "url": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+    }
+  },
+  {
+    "title": "Bandarban Hill Adventure",
+    "description": "Mountains, waterfalls and tribal culture.",
+    "price": 7000,
+    "duration": "3 Days 2 Nights",
+    "location": "Bandarban",
+    "image": {
+      "public_id": "tour/bandarban",
+      "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+    }
+  },
+  {
+    "title": "Rangamati Lake View Tour",
+    "description": "Peaceful lake and hanging bridge visit.",
+    "price": 5000,
+    "duration": "2 Days 1 Night",
+    "location": "Rangamati",
+    "image": {
+      "public_id": "tour/rangamati",
+      "url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"
+    }
+  },
+  {
+    Sylhet Tea Garden Tour
+    Green tea gardens and waterfall view
+     6500
+    2 Days 1 Night
+    Sylhet
+    
+  },
+  {
+    Kuakata Sea Beach Tour
+    See both sunrise and sunset from beach.
+    7500
+    3 Days 2 Nights
+    Kuakata
+    
+  },
+  {
+    "title": "Srimangal Nature Tour",
+    "description": "Seven layer tea and forest experience.",
+    "price": 5500,
+    "duration": "2 Days 1 Night",
+    "location": "Srimangal",
+    "image": {
+      "public_id": "tour/srimangal",
+      "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+    }
+  },
+  {
+    "title": "Dhaka City Tour",
+    "description": "Explore historical places in Dhaka city.",
+    "price": 3000,
+    "duration": "1 Day",
+    "location": "Dhaka",
+    "image": {
+      "public_id": "tour/dhaka",
+      "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+    }
+  }
+]

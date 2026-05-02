@@ -1,6 +1,7 @@
 'use client';
 
-import { CreateBookingData, Tour } from '@/redux/features/booking/bookingType';
+import { CreateBookingData } from '@/redux/features/booking/bookingType';
+import { Tour } from '@/redux/features/tour/tourType';
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 

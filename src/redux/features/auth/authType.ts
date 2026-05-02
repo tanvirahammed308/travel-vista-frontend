@@ -2,7 +2,11 @@ export interface User {
   id: string;
   name: string;
   email: string;
-  role: string;
+  role: string; profilePicture?: string; 
+  avatar?: {               
+    url: string;
+    publicId?: string;
+  };
 };
 
 export interface AuthState {

@@ -1,13 +1,21 @@
 export interface User {
   id: string;
+  _id?: string;
   name: string;
   email: string;
-  role: string; profilePicture?: string; 
+  role: string;
+  profilePicture?: string; 
   avatar?: {               
     url: string;
     publicId?: string;
   };
-};
+  phone?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  bookings?: any[];       
+  wishlist?: any[];        
+  reviews?: any[];       
+}
 
 export interface AuthState {
   user: User | null;

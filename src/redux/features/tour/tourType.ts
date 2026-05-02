@@ -10,7 +10,10 @@ export interface Tour {
   description: string;
   price: number;
   duration: string;
+  category?: string;
+  rating?: number;
   location: string;
+  maxGroupSize?: number;  
   image: TourImage;
   createdAt?: string;
   updatedAt?: string;

@@ -63,9 +63,9 @@ const ProtectedLayout = ({ children }: { children: React.ReactNode }) => {
 
           <li>
             <Link
-              href="/dashboard/bookings"
+              href="/dashboard/bookings/my-bookings"
               className={`flex items-center gap-2 p-2 rounded ${
-                pathname === "/dashboard/bookings" ? "bg-white text-black" : ""
+                pathname === "/dashboard/bookings/my-bookings" ? "bg-white text-black" : ""
               }`}
             >
               <MdBookOnline />

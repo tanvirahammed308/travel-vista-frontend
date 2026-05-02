@@ -8,6 +8,7 @@ export interface Tour {
   _id: string;
   title: string;
   description: string;
+  name?: string;
   price: number;
   duration: string;
   category?: string;

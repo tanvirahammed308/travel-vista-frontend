@@ -9,6 +9,8 @@ import { getTourById } from '@/redux/features/tour/tourThunk';
 import { createBooking } from '@/redux/features/booking/bookingThunk';
 import Image from 'next/image';
 import Swal from 'sweetalert2';
+import { FaArrowLeft } from 'react-icons/fa';
+import CheckoutSkeleton from '@/components/ui/CheckoutSkeleton';
 
 type PaymentMethod = 'cash' | 'bkash' | 'nagad' | 'card';
 
@@ -137,19 +139,29 @@ export default function CheckoutPage() {
     }
   };
 
+  // Show skeleton while loading tour data
   if (tourLoading || !selectedTour) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#052658]"></div>
-      </div>
-    );
+    return <CheckoutSkeleton />;
   }
 
   const totalPrice = selectedTour.price * formData.guests;
   const today = new Date().toISOString().split('T')[0];
 
+  const handleBackToTour = () => {
+    router.push(`/tours/${id}`);
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
+      {/* Back Button */}
+      <button
+        onClick={handleBackToTour}
+        className="mb-6 flex items-center gap-2 text-gray-600 hover:text-[#052658] dark:text-gray-400 dark:hover:text-white transition-colors group"
+      >
+        <FaArrowLeft className="group-hover:-translate-x-1 transition-transform" />
+        Back to Tour Details
+      </button>
+
       <h1 className="text-3xl font-bold mb-8">Complete Your Booking</h1>
       
       <div className="grid md:grid-cols-2 gap-8">

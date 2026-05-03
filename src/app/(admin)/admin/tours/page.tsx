@@ -34,12 +34,12 @@ const TourPage = () => {
 
   const currentTours = tours.slice(indexOfFirstTour, indexOfLastTour);
 
-  /* 🔥 Reset page when data changes */
+  /*  Reset page when data changes */
   useEffect(() => {
     setCurrentPage(1);
   }, [tours.length]);
 
-  /* 🔥 Fix page overflow after delete */
+  /*  Fix page overflow after delete */
   useEffect(() => {
     if (currentPage > totalPages && totalPages > 0) {
       setCurrentPage(totalPages);

@@ -37,7 +37,7 @@ const Navbar = () => {
     }
   }, []);
 
-  // ✅ Toggle Theme
+  // Toggle Theme
   const toggleTheme = () => {
     const newTheme = darkMode ? "light" : "dark";
 

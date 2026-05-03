@@ -14,7 +14,7 @@ import {
 const initialState: AuthState = {
   user: null,
   users: [],
-  loading: false, // FIXED (was true)
+  loading: false, 
   error: null,
   isCheckingAuth: true,
   isAuthenticated: false,

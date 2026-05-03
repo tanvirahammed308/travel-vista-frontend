@@ -132,7 +132,7 @@ const SignupPage = () => {
               dark:bg-gray-700 dark:text-white dark:border-gray-600"
             />
 
-            {/* 👁 ICON */}
+            {/*  ICON */}
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}

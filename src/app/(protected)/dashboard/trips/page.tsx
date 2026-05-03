@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-// 🔥 Icons
+//  Icons
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
 

@@ -18,7 +18,7 @@ const ProtectedLayout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   const pathname = usePathname();
 
-  // 🔥 PROTECT ROUTE
+  //  PROTECT ROUTE
   useEffect(() => {
     if (isCheckingAuth) return;
 
@@ -27,7 +27,7 @@ const ProtectedLayout = ({ children }: { children: React.ReactNode }) => {
     }
   }, [isAuthenticated, isCheckingAuth, router]);
 
-  // 🔥 LOADING STATE
+  //  LOADING STATE
   if (isCheckingAuth) {
     return (
       <div className="flex justify-center items-center min-h-screen">
@@ -36,7 +36,7 @@ const ProtectedLayout = ({ children }: { children: React.ReactNode }) => {
     );
   }
 
-  // 🔥 BLOCK UI IF NOT AUTHENTICATED
+  //  BLOCK UI IF NOT AUTHENTICATED
   if (!isAuthenticated) return null;
 
   return (

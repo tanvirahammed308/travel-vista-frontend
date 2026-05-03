@@ -34,10 +34,10 @@ const UpdateTourPage = () => {
     register,
     handleSubmit,
     reset,
-    watch, // ✅ IMPORTANT FIX (for live preview)
+    watch, // (for live preview)
   } = useForm<TourFormData>();
 
-  const watchedValues = watch(); // ✅ LIVE FORM DATA
+  const watchedValues = watch(); // LIVE FORM DATA
 
   /* ---------------- FETCH TOUR ---------------- */
   useEffect(() => {

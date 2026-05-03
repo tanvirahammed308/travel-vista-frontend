@@ -29,8 +29,8 @@ export interface User {
 // ========================
 export interface TourState {
   tours: Tour[];
-  selectedTour: Tour | null;  // Using selectedTour instead of currentTour
-  currentTour?: Tour | null;   // Alias for compatibility (optional)
+  selectedTour: Tour | null;  
+  currentTour?: Tour | null;   
   loading: boolean;
   error: string | null;
 }

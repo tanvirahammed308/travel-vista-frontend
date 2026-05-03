@@ -4,17 +4,17 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-// 👉 CSS import (better way: move to globals.css if needed)
+// CSS import (better way: move to globals.css if needed)
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-/* // 👉 Images
+/* //  Images
 import hero1 from "../../../public/images/hero/hero1.jpg";
 import hero2 from "../../../public/images/hero/hero2.jpg";
 import hero3 from "../../../public/images/hero/hero3.jpg"; */
 
-// 👉 Slides data
+//  Slides data
 const slides = [
   {
     id: 1,

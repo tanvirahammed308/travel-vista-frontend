@@ -24,7 +24,7 @@ export default function AdminBookingsPage() {
   const { bookings, loading, statistics } = useSelector((state: RootState) => state.booking);
   const { user } = useSelector((state: RootState) => state.auth);
 
-  // Use the correct BookingFilters type
+  //  BookingFilters type
   const [filters, setFilters] = useState<BookingFilters>({
     status: 'all',
     paymentStatus: 'all',

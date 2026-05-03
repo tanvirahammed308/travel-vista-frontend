@@ -9,6 +9,43 @@ import { FaSearch, FaTimes, FaFilter, FaMapMarkerAlt, FaTag, FaStar } from "reac
 import type { RootState, AppDispatch } from "@/redux/store";
 import { getAllTours } from "@/redux/features/tour/tourThunk";
 
+// Skeleton Components
+const TourCardSkeleton = () => (
+  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden animate-pulse">
+    <div className="relative h-56 w-full bg-gray-300 dark:bg-gray-700" />
+    <div className="p-5 space-y-3">
+      <div className="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4" />
+      <div className="h-4 bg-gray-300 dark:bg-gray-700 rounded w-1/2" />
+      <div className="h-4 bg-gray-300 dark:bg-gray-700 rounded w-1/3" />
+      <div className="h-4 bg-gray-300 dark:bg-gray-700 rounded w-full" />
+      <div className="flex gap-2 pt-2">
+        <div className="h-10 bg-gray-300 dark:bg-gray-700 rounded-xl flex-1" />
+        <div className="h-10 bg-gray-300 dark:bg-gray-700 rounded-xl flex-1" />
+      </div>
+    </div>
+  </div>
+);
+
+const TourGridSkeleton = () => (
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+    {[1, 2, 3, 4, 5, 6].map((i) => (
+      <TourCardSkeleton key={i} />
+    ))}
+  </div>
+);
+
+const FiltersSkeleton = () => (
+  <div className="flex flex-col md:flex-row justify-between gap-4 md:items-center animate-pulse">
+    <div className="h-8 w-48 bg-gray-300 dark:bg-gray-700 rounded" />
+    <div className="flex gap-3 flex-col md:flex-row w-full md:w-auto">
+      <div className="h-10 w-full md:w-80 bg-gray-300 dark:bg-gray-700 rounded-xl" />
+      <div className="h-10 w-24 bg-gray-300 dark:bg-gray-700 rounded-xl" />
+      <div className="h-10 w-32 bg-gray-300 dark:bg-gray-700 rounded-xl" />
+      <div className="h-10 w-24 bg-gray-300 dark:bg-gray-700 rounded-xl" />
+    </div>
+  </div>
+);
+
 const TourPage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const router = useRouter();
@@ -120,12 +157,12 @@ const TourPage = () => {
       });
     }
 
-    // LOCATION filter (NEW)
+    // LOCATION filter
     if (selectedLocation !== "all") {
       data = data.filter((tour: any) => tour.location === selectedLocation);
     }
 
-    // CATEGORY filter (NEW)
+    // CATEGORY filter
     if (selectedCategory !== "all") {
       data = data.filter((tour: any) => tour.category === selectedCategory);
     }
@@ -169,14 +206,26 @@ const TourPage = () => {
   ].filter(Boolean).length;
 
   // ========================
-  // LOADING
+  // SKELETON LOADING STATE (instead of loading spinner)
   // ========================
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-500">Loading tours...</p>
+      <div className="p-6 space-y-6 max-w-7xl mx-auto">
+        {/* Header Skeleton */}
+        <FiltersSkeleton />
+        
+        {/* Search Results Info Skeleton (hidden when loading) */}
+        
+        {/* Tour Grid Skeleton */}
+        <TourGridSkeleton />
+        
+        {/* Pagination Skeleton */}
+        <div className="flex justify-center gap-2 pt-6 flex-wrap animate-pulse">
+          <div className="h-10 w-20 bg-gray-300 dark:bg-gray-700 rounded-lg" />
+          <div className="h-10 w-10 bg-gray-300 dark:bg-gray-700 rounded-lg" />
+          <div className="h-10 w-10 bg-gray-300 dark:bg-gray-700 rounded-lg" />
+          <div className="h-10 w-10 bg-gray-300 dark:bg-gray-700 rounded-lg" />
+          <div className="h-10 w-20 bg-gray-300 dark:bg-gray-700 rounded-lg" />
         </div>
       </div>
     );

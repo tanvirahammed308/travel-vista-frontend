@@ -2,7 +2,7 @@
 
 import React from "react";
 
-// 🔥 Icons
+//  Icons
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
 import { AiOutlineIdcard } from "react-icons/ai";

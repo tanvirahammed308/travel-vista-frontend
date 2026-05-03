@@ -227,9 +227,9 @@ const TourDetailsPage = () => {
                 </button>
 
                 <div className="mt-4 text-center text-sm text-gray-500 dark:text-gray-400">
-                  <p>✅ Free cancellation up to 7 days</p>
-                  <p>✅ Best price guarantee</p>
-                  <p>✅ Instant confirmation</p>
+                  <p> Free cancellation up to 7 days</p>
+                  <p> Best price guarantee</p>
+                  <p> Instant confirmation</p>
                 </div>
               </div>
             </div>

@@ -23,6 +23,7 @@ import {
   FaExclamationTriangle
 } from 'react-icons/fa';
 import { MdOutlineCategory } from 'react-icons/md';
+import PackagesSkeleton from '@/components/ui/PackagesSkeleton';
 
 export default function PackagesPage() {
   const dispatch = useDispatch<AppDispatch>();
@@ -42,18 +43,9 @@ export default function PackagesPage() {
     dispatch(getAllTours());
   }, [dispatch]);
 
-  // Debug: Log tours data
-  useEffect(() => {
-    console.log('Tours data:', tours);
-    console.log('Loading state:', loading);
-    console.log('Error state:', error);
-    console.log('Number of tours:', tours.length);
-  }, [tours, loading, error]);
-
   // Get unique categories from tours
   const categories = useMemo(() => {
     const cats = new Set(tours.map((tour: any) => tour.category).filter(Boolean));
-    console.log('Categories found:', Array.from(cats));
     return ['all', ...Array.from(cats)];
   }, [tours]);
 
@@ -174,16 +166,9 @@ export default function PackagesPage() {
     );
   };
 
-  // Loading state
+  // Show skeleton while loading
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#01204C] mx-auto mb-4"></div>
-          <p className="text-gray-500 dark:text-gray-400">Loading packages...</p>
-        </div>
-      </div>
-    );
+    return <PackagesSkeleton />;
   }
 
   // Error state

@@ -106,7 +106,7 @@ TravelVista is a full-stack tour booking platform that allows users to discover,
 git clone https://github.com/yourusername/travel-vista-frontend.git
 cd travel-vista-frontend
 
-Demo Credentials
+2. **Demo Credentials**
 User=>
 Email:azad@gmail.com
 Password:Azad#123
